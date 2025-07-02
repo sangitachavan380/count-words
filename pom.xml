@@ -22,7 +22,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.sangita.wordprocessor.CountWord</mainClass>
+                            <mainClass>com.sangita.wordprocessor.CountWords</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
