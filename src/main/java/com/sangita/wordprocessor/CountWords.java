@@ -22,7 +22,7 @@ public class CountWords {
 		try {
 			List<String> words=countNumberofWordsfromFile(Filepath);
 			long wordcount=countNumberwordsStartWithM(words);
-			List<String> longwords=printWordslongerThan(words,5);
+			List<String> longwords=printWordslongerThan(words,BusinessRulesConfig.MIN_WORD_LENGTH);
 			
 			System.out.println("Number of words start with M or m :" +wordcount);
 			System.out.println("Words longer than 5 Characters :");
@@ -57,7 +57,7 @@ public class CountWords {
 		// TODO Auto-generated method stub
 		
 		return words.stream()
-				.filter(word->word.toLowerCase().startsWith("m")).count();
+				.filter(word->word.toLowerCase().startsWith(BusinessRulesConfig.STARTING_LETTER)).count();
 	}
 
 	public static List<String> countNumberofWordsfromFile(String filepath) throws FileNotFoundException, IOException {
